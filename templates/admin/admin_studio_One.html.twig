@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminStudioOneController!{% endblock %}
+
+{% block body %}
+
+ <div class="col-lg-12 display-4 text-center my-3">
+    <h2>Formulaire studio one</div>
+</div>
+
+<div class="col-10 m-5">
+    <table class="table table-bordered table-hover table-sm text-center">
+        <thead>
+            <tr>
+                    <th scope="col">N°</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Album</th>
+                    <th scope="col">Reference</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Label</th>
+                    <th scope="col">Img</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for musique in musiques %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ musique.nom }}</td>
+                        <td>{{ musique.album }}</td>
+                        <td>{{ musique.reference }}</td>
+                        <td>{{ musique.prix }}</td>
+                        <td>{{ musique.label }}</td>
+                        <td>{{ musique.img }}</td>
+                        <td>
+                            <a href="">Modifier</a> | <a href="">Supprimer</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ path('app_trojan_create') }}" class="btn btn-outline-dark">Ajouter</a>
+
+        <a href="{{ path('app_admin') }}" class="btn btn-outline-info text-white">Retour admin</a>
+
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin{% endblock %}
+
+{% block body %}
+
+<h1 class="display-4 text-center my-4">BACK OFFICE</h1>
+
+<a href="{{ path('app_admin_trojan') }}" class="col-md-6 offset-md-3 mb-5 btn btn-info">TROJAN RECORDS</a>
+
+<a href="{{ path('app_admin_studio_one') }}" class="col-md-6 offset-md-3 mb-5 btn btn-warning">STUDIO ONE</a>
+
+<a href="" class="col-md-6 offset-md-3 mb-5 btn btn-dark">PRESSURE SOUND</a>
+
+<a href="" class="col-md-6 offset-md-3 mb-5 btn btn-dark">WACKIES</a>
+
+<a href="{{ path('app_logout') }}" class="col-md-6 offset-md-3 mb-5 btn btn-success">DECONNEXION</a>
+
+
+
+<header>
+    <div class="container-fluid m-0 p-0">
+        <div class="box">
+            <h2>Espace adminstrateur</h2>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 bg-info">
+            <ul>
+                <li><a href="{{ path('app_admin_trojan') }}">Trojan Records</a></li>
+                <li><a href="{{ path('app_admin_studio_one') }}">studio One</a></li>
+                <li><a href="{{ path('app_pressure') }}">Pressure Sounds</a></li>
+                <li><a href="{{ path('app_wackie') }}">Wackies</a></li>
+                <li><a href="{{ path('app_admin') }}">Accueil admin</a><li>
+                <li><a href="{{ path('app_logout') }}">Déconnexion</a><li>
+            </ul>
+        </div>
+        <div class="col md-10">
+            <h3>Formulaire</h3>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
